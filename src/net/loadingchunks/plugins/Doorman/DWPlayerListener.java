@@ -16,18 +16,21 @@ public class DWPlayerListener extends PlayerListener {
 		if(p.getReason().equalsIgnoreCase("Flying is not enabled on this server") && this.plugin.dmConfig.get("msg_flying") != null)
 		{
 			p.setReason(this.plugin.dmConfig.get("msg_flying"));
+			System.out.println("Telling them to stop flying...");
 			return;
 		}
 
 		if(p.getReason().equalsIgnoreCase("Took too long to log in") && this.plugin.dmConfig.get("msg_long") != null)
 		{
 			p.setReason(this.plugin.dmConfig.get("msg_long"));
+			System.out.println("That's a long login you've got there...");
 			return;
 		}
 		
 		if(p.getReason().equalsIgnoreCase("Outdated server!") && this.plugin.dmConfig.get("msg_outdated_server") != null)
 		{
 			p.setReason(this.plugin.dmConfig.get("msg_outdated_server"));
+			System.out.println("lol outdated server.");
 			return;
 		}
 		
